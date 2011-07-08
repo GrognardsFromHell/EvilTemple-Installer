@@ -1,8 +1,4 @@
 
-echo "Copying files into the target directory"
-
-ls -recurse ../out/release/
-
 echo "Checking for previous install list"
 if (test-path 'install-files.nsh') {
 	rm install-files.nsh
