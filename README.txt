@@ -1,0 +1,1 @@
+All files from the Main directory will be installed into the main application directory.
