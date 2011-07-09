@@ -23,7 +23,7 @@ echo "Directories:"
 echo $dirs
 echo "Files:"
 echo $files
-$dirs | foreach {Add-Content install-files.nsh ('${CreateDirectory} $INSTDIR\' + $_)}
-$files | foreach {Add-Content install-files.nsh ('${File} Main\ ' + $_)}
+$dirs | foreach {Add-Content install-files.nsh ('${CreateDirectory} "$INSTDIR\' + $_ + '"')}
+$files | foreach {Add-Content install-files.nsh ('${File} Main\ "' + $_ + '"')}
 
 echo "Done writing install list"
